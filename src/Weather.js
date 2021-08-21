@@ -15,7 +15,7 @@ let [icon, setIcon] = useState(null);
     setDescription(response.data.weather[0].description);
     setWind(response.data.wind.speed);
     setHumidity(response.data.main.humidity);
-    setIcon (`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    
   }
 
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=d4a6a488c953cc85e69ba334cc42f424&units=metric`;
@@ -35,7 +35,7 @@ let [icon, setIcon] = useState(null);
         <br />
         <div className="row">
           <div className="col">
-            <img alt="weather-icon" src={icon} width="80px" />
+            
           </div>
           <div className="col">
             <h2>{Math.round(temperature)}℃</h2>
