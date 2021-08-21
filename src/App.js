@@ -1,22 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import ReactAnimatedWeather from 'react-animated-weather';
+import Weather from "./Weather"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+         <ReactAnimatedWeather
+        icon="CLEAR_NIGHT"
+        color="indigo"
+        size={100}
+        animate={true}
+      />
+       <h1>Lisbon</h1>
+        <Weather city="Lisbon"/>
       </header>
     </div>
   );
