@@ -1,38 +1,101 @@
-.App {
+body {
   text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  padding-top: 50px;
+  color: #006ec5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img {
+  position: relative;
+  top: 10px;
+}
+h2 {
+  color: #006ec5;
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+  top: 22px;
+}
+h3 {
+  position: relative;
+  top: 15px;
+  text-transform: capitalize;
+  color: #525252;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+span {
+  color: #525252;
+  font-weight: bold;
+  font-size: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+p {
+  color: #006ec5;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+button {
+  border: 1px solid #569afe;
+  background: #569afe;
+  border-radius: 10px;
+  color: white;
+  display: block;
+  margin: 20px auto;
+  padding: 5px 5px;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
+  padding: 10px 40px;
+  border-radius: 3%;
+  box-shadow: rgb(36 37 90 / 8%) 0px 8px 8px 0;
+  background: linear-gradient(to bottom, #d2d7db 0%, #8eb7e1 100%);
+  opacity: 70%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.type-city {
+  width: 300px;
+  margin-top: 30px;
+}
+.btn {
+  margin-top: -5px;
+}
+.row {
+  margin-bottom: 30px;
+  color: #104b99;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-forecast {
+  font-weight: bold;
+
+  text-align: center;
+  color: #192c58;
+}
+
+.weather-forecast-date {
+  font-size: 20px;
+  color: #192c58;
+}
+
+.weather-forecast-temperature-max {
+  font-size: 18px;
+  color: #192c58;
+}
+
+.weather-forecast-temperature-min {
+  font-size: 18px;
+  color: #192c58;
 }

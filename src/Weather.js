@@ -22,15 +22,43 @@ let [icon, setIcon] = useState(null);
 
   if (temperature) {
     return (
-      <ul className="Form">
-        {" "}
-        <li> Temperature: {Math.round(temperature)} ℃ </li>
-        <li> Description: {description} </li>
-        <li> Humidity: {humidity} %</li>
-        <li> Wind Speed: {wind} km/hr </li>
-        <li> <img src={icon} alt={description} /></li>
-      </ul>
-    );
+    <body>
+      <div className="container">
+        <form>
+          <input className="type-city" type="text" placeholder="Type a city" />
+          <input
+            type="submit"
+            button
+            type="button"
+            className="btn btn-primary"
+            value="Search city"
+          />
+        </form>
+        <button>Current Location</button>
+        <h1>Lisbon</h1>
+        <span>Last updated: "Sunday, 12:00"</span>
+        <p></p>
+        <br />
+
+        <div className="row">
+          <div className="col">
+            <img alt="weather-icon" src={icon} width="80px" />
+          </div>
+          <div className="col">
+            <h2>Temperature: {Math.round(temperature)} ℃</h2>
+            <h3>Description: {description}</h3>
+            <span>Humidity: {humidity}%</span> <br />
+            <span>Wind: {wind} km/h</span>
+            
+            
+          </div>
+        </div>
+
+        <div className="weather-forecast"></div>
+      </div>
+      <br />
+    </body>
+  );
   } else {
     return "Loading...";
   }
