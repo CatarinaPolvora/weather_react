@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+
 export default function Weather (props) {
 
 let [temperature, setTemperature] = useState(null);
@@ -11,7 +12,7 @@ let [icon, setIcon] = useState(null);
 
   function showTemperature(response) {
     setTemperature(response.data.main.temp);
-    setDescription(response.data.weather.[0].description);
+    setDescription(response.data.weather[0].description);
     setWind(response.data.wind.speed);
     setHumidity(response.data.main.humidity);
     setIcon (`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -26,27 +27,19 @@ let [icon, setIcon] = useState(null);
       <div className="container">
         <form>
           <input className="type-city" type="text" placeholder="Type a city" />
-          <input
-            type="submit"
-            button
-            type="button"
-            className="btn btn-primary"
-            value="Search city"
-          />
+          <input  type="submit" button type="button" className="btn btn-primary" value="Search city" />
         </form>
         <button>Current Location</button>
         <h1>Lisbon</h1>
-        <span>Last updated: "Sunday, 12:00"</span>
-        <p></p>
+        <span>Last updated: Sunday, 12:00</span>
         <br />
-
         <div className="row">
           <div className="col">
             <img alt="weather-icon" src={icon} width="80px" />
           </div>
           <div className="col">
-            <h2>Temperature: {Math.round(temperature)} ℃</h2>
-            <h3>Description: {description}</h3>
+            <h2>{Math.round(temperature)} ℃</h2>
+            <h3>{description}</h3>
             <span>Humidity: {humidity}%</span> <br />
             <span>Wind: {wind} km/h</span>
             
