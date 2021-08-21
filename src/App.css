@@ -47,11 +47,27 @@ button {
   background: #569afe;
   border-radius: 10px;
   color: white;
-  display: block;
+ display: block;
   margin: 20px auto;
   padding: 5px 5px;
 }
-
+.Search { border: 1px solid #569afe;
+  background: #569afe;
+  border-radius: 10px;
+  color: white;
+  display: inline;
+  margin: 20px auto;
+  margin-right: 5px;
+  padding: 5px 5px;
+}
+.City {
+  border-radius: 10px;
+border: 1px solid #569afe;
+margin: 20px ;
+margin-left: 5px;
+  padding: 5px 5px;
+  width: 300px;
+}
 .container {
   display: block;
   margin: 0 auto;
@@ -65,10 +81,7 @@ button {
   color: white;
 }
 
-.type-city {
-  width: 300px;
-  margin-top: 30px;
-}
+
 .btn {
   margin-top: -5px;
 }

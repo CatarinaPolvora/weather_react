@@ -26,8 +26,8 @@ let [icon, setIcon] = useState(null);
     <body>
       <div className="container">
         <form>
-          <input className="type-city" type="text" placeholder="Type a city" />
-          <input  type="submit" button type="button" className="btn btn-primary" value="Search city" />
+       <input className="City" type="search" placeholder="Type a city" />
+        <input className="Search" type="submit"  value="Search"/>
         </form>
         <button>Current Location</button>
         <h1>Lisbon</h1>
