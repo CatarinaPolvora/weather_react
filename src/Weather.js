@@ -38,7 +38,7 @@ let [icon, setIcon] = useState(null);
             <img alt="weather-icon" src={icon} width="80px" />
           </div>
           <div className="col">
-            <h2>{Math.round(temperature)} ℃</h2>
+            <h2>{Math.round(temperature)}℃</h2>
             <h3>{description}</h3>
             <span>Humidity: {humidity}%</span> <br />
             <span>Wind: {wind} km/h</span>
