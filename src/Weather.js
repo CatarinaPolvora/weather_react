@@ -8,7 +8,7 @@ let [temperature, setTemperature] = useState(null);
   let [description, setDescription] = useState(null);
   let [wind, setWind] = useState(null);
   let [humidity, setHumidity] = useState(null);
-let [icon, setIcon] = useState(null);
+
 
   function showTemperature(response) {
     setTemperature(response.data.main.temp);
