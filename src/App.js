@@ -11,6 +11,7 @@ function App() {
        
         <Weather city="Lisbon"/>
       </header>
+      <small>This project was coded by Catarina Almeida and is <a href= "https://github.com/CatarinaPolvora/weather_react">open-sourced</a></small>
     </div>
   );
 }
