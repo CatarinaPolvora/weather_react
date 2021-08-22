@@ -1,6 +1,7 @@
 {
-  "hompepage": ".",
+  
   "name": "weather_react",
+  "hompepage": "https://epic-kirch-55b0c9.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
