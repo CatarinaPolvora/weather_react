@@ -6,12 +6,15 @@ export default function Weather(props) {
   let [description, setDescription] = useState(null);
   let [wind, setWind] = useState(null);
   let [humidity, setHumidity] = useState(null);
+  let [icon, setIcon] = useState(null);
 
   function showTemperature(response) {
     setDescription(response.data.weather[0].description);
     setWind(response.data.wind.speed);
     setHumidity(response.data.main.humidity);
     setTemperature(response.data.main.temp);
+    setIcon (`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
   }
 
   if (temperature) {
@@ -27,7 +30,10 @@ export default function Weather(props) {
           <span>Last updated: Sunday, 12:00</span>
           <br />
           <div className="row">
-            <div className="col"></div>
+            <div className="col">
+              
+<img alt="weather-icon" src={icon} width="80px" />
+            </div>
             <div className="col">
               <h2>{Math.round(temperature)}℃</h2>
               <h3>{description}</h3>
