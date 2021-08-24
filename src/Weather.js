@@ -27,7 +27,7 @@ export default function Weather(props) {
             <input className="Search" type="submit" value="Search" />
           </form>
           <button>Current Location</button>
-          <h1>Lisbon</h1>
+          <h1 className="neonText">Lisbon</h1>
           <span>Last updated: Sunday, 12:00</span>
           <br />
           <div className="row">
@@ -36,8 +36,8 @@ export default function Weather(props) {
 <img alt="weather-icon" src={icon} width="80px" />
             </div>
             <div className="col">
-              <h2>{Math.round(temperature)}℃</h2>
-              <h3>{description}</h3>
+              <h2 className="neonText">{Math.round(temperature)}℃</h2>
+              <h3 className="neonText">{description}</h3>
               <span>Humidity: {humidity}%</span> <br />
               <span>Wind: {wind} km/h</span>
             </div>
