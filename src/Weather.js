@@ -21,7 +21,7 @@ export default function Weather(props) {
   if (temperature) {
     return (
       <body>
-        <div className="container">
+        <div>
           <form>
             <input className="City" type="search" placeholder="Type a city" />
             <input className="Search" type="submit" value="Search" />

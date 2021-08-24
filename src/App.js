@@ -5,15 +5,21 @@ import Weather from "./Weather"
 
 function App() {
   return (
+    
+    
+    
     <div className="App">
+      <div className="container">
     
       <header className="App-header">
         
        
         <Weather city="Lisbon"/>
       </header>
-      <small>This project was coded by Catarina Almeida and is <a href= "https://github.com/CatarinaPolvora/weather_react">open-sourced</a></small>
+      
     </div>
+    <br/>
+    <small>This project was coded by Catarina Almeida and is <a href= "https://github.com/CatarinaPolvora/weather_react">open-sourced</a></small></div>
   );
 }
 
