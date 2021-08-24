@@ -3,11 +3,12 @@ body {
   display: block;
   margin: 0 auto;
   margin-top: 100px;
+  background-color: black;
 }
 
 h1 {
   padding-top: 50px;
-  color: #006ec5;
+  ;
 }
 
 img {
@@ -15,7 +16,6 @@ img {
   top: 10px;
 }
 h2 {
-  color: #006ec5;
   font-weight: bold;
   font-size: 30px;
   position: relative;
@@ -57,6 +57,8 @@ border: 1px solid white;
 button:hover {
   background-color:#0400E4;
 }
+
+small {color:white}
 .Search { color: white;
 
 background-color: black;
@@ -82,8 +84,16 @@ margin-left: 5px;
   text-align: center;
   width: 500px;
   padding: 10px 40px;
-  border: 10px solid#000000;
-  border-radius: 20px;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #0400E4,
+              0 0 0.8rem #0400E4,
+              0 0 2.8rem #0400E4,
+              inset 0 0 1.3rem #0400E4;
+  
 
   background: #000000;
   opacity: 0.7;
