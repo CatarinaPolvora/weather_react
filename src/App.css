@@ -43,16 +43,16 @@ p {
 }
 
 button {
-  border: 1px solid #00208C;
-  background: #00208C;
+  border: 1px solid #4E4DB6;
+  background: #4E4DB6;
   border-radius: 10px;
   color: white;
  display: block;
   margin: 20px auto;
   padding: 5px 5px;
 }
-.Search { border: 1px solid #0F52BA;
-  background: #0F52BA;
+.Search { border: 1px solid #4E4DB6;
+  background: #4E4DB6;
   border-radius: 10px;
   color: white;
   display: inline;
