@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import FormattedDate from "./FormattedDate"
 import axios from "axios";
 
 export default function Weather(props) {
@@ -28,7 +28,7 @@ export default function Weather(props) {
           </form>
           <button>Current Location</button>
           <h1 className="neonText">Lisbon</h1>
-          <span>Last updated: Sunday, 12:00</span>
+          <span>Last updated: <FormattedDate/> </span>
           <br />
           <div className="row">
             <div className="col">
