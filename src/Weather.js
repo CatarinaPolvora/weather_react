@@ -28,7 +28,7 @@ export default function Weather(props) {
           </form>
           <button>Current Location</button>
           <h1 className="neonText">Lisbon</h1>
-          <span>Last updated: <FormattedDate/> </span>
+          <span>Last updated: <FormattedDate date={props.data.date}/>  </span>
           <br />
           <div className="row">
             <div className="col">
