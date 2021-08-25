@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormattedDate from "./FormattedDate"
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -8,17 +8,20 @@ export default function Weather(props) {
   let [wind, setWind] = useState(null);
   let [humidity, setHumidity] = useState(null);
   let [icon, setIcon] = useState(null);
+  let [date, setDate] = useState(null);
 
   function showTemperature(response) {
     setDescription(response.data.weather[0].description);
     setWind(response.data.wind.speed);
     setHumidity(response.data.main.humidity);
     setTemperature(response.data.main.temp);
-    setIcon (`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-
+    setDate(new Date(response.data.dt));
+    setIcon(
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
   }
 
-  if (temperature) {
+  if (temperature && date) {
     return (
       <body>
         <div>
@@ -28,12 +31,13 @@ export default function Weather(props) {
           </form>
           <button>Current Location</button>
           <h1 className="neonText">Lisbon</h1>
-          <span>Last updated: <FormattedDate date={props.data.date}/>  </span>
+          <span>
+            Last updated: <FormattedDate date={date} />{" "}
+          </span>
           <br />
           <div className="row">
             <div className="col">
-              
-<img alt="weather-icon" src={icon} width="80px" />
+              <img alt="weather-icon" src={icon} width="80px" />
             </div>
             <div className="col">
               <h2 className="neonText">{Math.round(temperature)}℃</h2>
