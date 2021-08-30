@@ -13,8 +13,8 @@ function App() {
     
       <header className="App-header">
         
-       
-        <Weather city="Lisbon"/>
+      
+        <Weather city="Lisbon" />
       </header>
       
     </div>
