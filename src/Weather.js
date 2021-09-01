@@ -11,7 +11,7 @@ export default function Weather(props) {
   let [icon, setIcon] = useState(null);
   let [date, setDate] = useState(null);
    let [city, setCity] = useState(props.city);
-   let [tempCity, setTempCity] = useState("");
+   
   
 
   function showTemperature(response) {
@@ -32,12 +32,12 @@ let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d4a6a
 
   function handleSubmit(event) {
     event.preventDefault();
-    setCity(tempCity);
+    
     search();
   }
 
   function updateCity(event) {
-    setTempCity(event.target.value);}
+    setCity(event.target.value);}
 
   if (temperature && date) {
     return (
