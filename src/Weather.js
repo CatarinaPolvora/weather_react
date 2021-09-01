@@ -55,7 +55,7 @@ let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d4a6a
           <br />
           <div className="row">
             <div className="col">
-              <img alt="weather-icon" src={icon} width="80px" />
+              <img alt="weather-icon" src={icon} width="150px" />
             </div>
             <div className="col">
               <h2 className="neonText"><Temperature/></h2>
