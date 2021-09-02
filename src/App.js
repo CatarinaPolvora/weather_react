@@ -19,7 +19,7 @@ function App() {
       
     </div>
     <br/>
-    <small>This project was coded by Catarina Almeida and is <a href= "https://github.com/CatarinaPolvora/weather_react" target="_blank">open-sourced</a></small></div>
+    <small>This project was coded by Catarina Almeida and is <a href= "https://github.com/CatarinaPolvora/weather_react" target="_blank">open-sourced on GitHub</a></small></div>
   );
 }
 
