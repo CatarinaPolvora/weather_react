@@ -58,7 +58,7 @@ let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d4a6a
               <img alt="weather-icon" src={icon} width="150px" />
             </div>
             <div className="col">
-              <h2 className="neonText"><Temperature/></h2>
+              <h2 className="neonText"><Temperature celsius={temperature}/></h2>
               <h3 className="neonText">{description}</h3>
               <span>Humidity: {humidity}%</span> <br />
               <span>Wind: {wind} km/h</span>
