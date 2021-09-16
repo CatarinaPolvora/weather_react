@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Temperature from "./Temperature";
 import FormattedDate from "./FormattedDate";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -11,7 +12,7 @@ export default function Weather(props) {
   let [icon, setIcon] = useState(null);
   let [date, setDate] = useState(null);
    let [city, setCity] = useState(props.city);
-   
+   let [coordinates, setCoordinates] = useState(null);
   
 
   function showTemperature(response) {
@@ -23,6 +24,7 @@ export default function Weather(props) {
     setIcon(
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+    setCoordinates(response.data.coord);
   }
  
 function search(){
@@ -65,7 +67,7 @@ let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d4a6a
             </div>
           </div>
 
-          <div className="weather-forecast"></div>
+          <WeatherForecast coordinates={showTemperature.coordinates} />
         </div>
         <br />
       </body>
