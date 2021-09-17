@@ -19,14 +19,14 @@ export default function Weather(props) {
     setDescription(response.data.weather[0].description);
     setWind(response.data.wind.speed);
     setHumidity(response.data.main.humidity);
-    setTemperature(response.data.main.temp);
-    setDate(new Date(response.data.dt*1000));
     setIcon(
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
     setCoordinates(response.data.coord);
+    setTemperature(response.data.main.temp);
+    setDate(new Date(response.data.dt * 1000));
   }
- 
+  
 function search(){
 let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d4a6a488c953cc85e69ba334cc42f424&units=metric`;
     axios.get(url).then(showTemperature);
@@ -67,7 +67,7 @@ let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d4a6a
             </div>
           </div>
 
-          <WeatherForecast coordinates={showTemperature.coordinates} />
+          <WeatherForecast coordinates={coordinates} />
         </div>
         <br />
       </body>
