@@ -60,6 +60,10 @@ button:hover {
 }
 
 small {color:white}
+
+.icon {
+  margin-top: 100px;
+}
 .temperature {
   font-size: 30px;
 }

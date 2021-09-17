@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Temperature from "./Temperature";
 import FormattedDate from "./FormattedDate";
 import WeatherForecast from "./WeatherForecast";
+import WeatherIcon from "./WeatherIcon";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -20,7 +21,7 @@ export default function Weather(props) {
     setWind(response.data.wind.speed);
     setHumidity(response.data.main.humidity);
     setIcon(
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      response.data.weather[0].icon
     );
     setCoordinates(response.data.coord);
     setTemperature(response.data.main.temp);
@@ -49,7 +50,7 @@ let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d4a6a
         <input className="City" type="search" placeholder="Type a city" onChange={updateCity} />
             <input className="Search" type="submit" value="Search" />
           </form>
-          <button>Current Location</button>
+          
           <h1 className="neonText">{city}</h1>
           <span>
             Last updated: <FormattedDate date={date} />{" "}
@@ -57,7 +58,7 @@ let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d4a6a
           <br />
           <div className="row">
             <div className="col">
-              <img alt="weather-icon" src={icon} width="150px" />
+              <WeatherIcon mt-5 code={icon} size={120} className="icon"/>
             </div>
             <div className="col">
               <h2 className="neonText"><Temperature celsius={temperature}/></h2>
