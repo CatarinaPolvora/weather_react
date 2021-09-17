@@ -125,17 +125,7 @@ margin-left: 5px;
   font-weight: bold;
 }
 
-.weather-forecast {
-  font-weight: bold;
 
-  text-align: center;
-  color: #192c58;
-}
-
-.weather-forecast-date {
-  font-size: 20px;
-  color: #192c58;
-}
 
 .weather-forecast-temperature-max {
   font-size: 18px;
