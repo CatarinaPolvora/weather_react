@@ -55,14 +55,19 @@ border: 1px solid white;
   padding: 5px 5px;
 }
 
-button:hover {
+.Search:hover {
   background-color:#0400E4;
 }
 
 small {color:white}
 
-.icon {
-  margin-top: 100px;
+canvas {
+  margin: 20px 0px;
+}
+
+.WeatherForecast-day {
+  color: white;
+  size: bold;
 }
 .temperature {
   font-size: 30px;
